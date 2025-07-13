@@ -10,14 +10,20 @@
 <body>
     <!-- Navigation Bar -->
     <header>
-        <h1 class="logo" >Portfolio</h1>
+        <h1 class="logo">Portfolio</h1>
         <nav>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <div class="hamburger" id="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </header>
 
@@ -38,29 +44,112 @@
     
     <div class="project-container">
         <div class="project-card">
-            <img src="page6.jpg" alt="Project 1">
+            <div class="project-image">
+                <img src="page6.jpg" alt="KrishiSahayata">
+                <div class="project-overlay">
+                    <div class="project-links">
+                        <a href="#" class="project-link" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
             <div class="project-info">
                 <h3>KrishiSahayata</h3>
-                <p>A platform that helps farmers to rent,share and manage their farming equipments</p>
-                <a href="#" class="btn project-btn">View Project</a>
+                <p>A platform that helps farmers to rent, share and manage their farming equipments</p>
+                <div class="project-tech">
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">MongoDB</span>
+                </div>
             </div>
         </div>
         
         <div class="project-card">
-            <img src="page6.jpg" alt="Project 2">
+            <div class="project-image">
+                <img src="page6.jpg" alt="Connexa">
+                <div class="project-overlay">
+                    <div class="project-links">
+                        <a href="#" class="project-link" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
             <div class="project-info">
                 <h3>Connexa</h3>
                 <p>A platform for college students to connect and collaborate for inter/intra college activities.</p>
-                <a href="#" class="btn project-btn">View Project</a>
+                <div class="project-tech">
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">Express</span>
+                    <span class="tech-tag">MySQL</span>
+                </div>
             </div>
         </div>
 
         <div class="project-card">
-            <img src="page6.jpg" alt="Project 3">
+            <div class="project-image">
+                <img src="page6.jpg" alt="Saturn">
+                <div class="project-overlay">
+                    <div class="project-links">
+                        <a href="#" class="project-link" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
             <div class="project-info">
-                <h3>Saturn'</h3>
-                <p>A smart budgeting web app.</p>
-                <a href="#" class="btn project-btn">View Project</a>
+                <h3>Saturn</h3>
+                <p>A smart budgeting web app with expense tracking and financial insights.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">HTML</span>
+                    <span class="tech-tag">CSS</span>
+                    <span class="tech-tag">JavaScript</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-image">
+                <img src="page6.jpg" alt="Project 4">
+                <div class="project-overlay">
+                    <div class="project-links">
+                        <a href="#" class="project-link" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-info">
+                <h3>Project 4</h3>
+                <p>Description of your fourth project goes here.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Django</span>
+                    <span class="tech-tag">PostgreSQL</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-image">
+                <img src="page6.jpg" alt="Project 5">
+                <div class="project-overlay">
+                    <div class="project-links">
+                        <a href="#" class="project-link" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-info">
+                <h3>Project 5</h3>
+                <p>Description of your fifth project goes here.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">Firebase</span>
+                    <span class="tech-tag">Tailwind</span>
+                </div>
             </div>
         </div>
     </div>
@@ -99,6 +188,59 @@
     </div>
 </section>
 
+<!-- Education Timeline Section -->
+<section id="education">
+    <h2 class="section-title">Education</h2>
+    <p class="section-description">My academic journey and achievements.</p>
+    <div class="edu-timeline">
+        <div class="edu-timeline-list">
+            <div class="edu-timeline-item">
+                <div class="edu-timeline-circle"><i class="fas fa-school"></i></div>
+                <div class="edu-timeline-year">2011-2021</div>
+                <div class="edu-timeline-card glass-card">
+                    <h3>Dr. N.P. Shah English Medium School, Virar</h3>
+                    <ul>
+                        <li>SSC (State Board)</li>
+                        <li>Scored 85.80%</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="edu-timeline-item">
+                <div class="edu-timeline-circle"><i class="fas fa-university"></i></div>
+                <div class="edu-timeline-year">2021-2023</div>
+                <div class="edu-timeline-card glass-card">
+                    <h3>Ismail Yusuf College of Engineering and Technology, Mumbai</h3>
+                    <ul>
+                        <li>HSC (Science Stream)</li>
+                        <li>Scored 75.5%</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="edu-timeline-item">
+                <div class="edu-timeline-circle"><i class="fas fa-file-alt"></i></div>
+                <div class="edu-timeline-year">2023</div>
+                <div class="edu-timeline-card glass-card">
+                    <h3>MHT-CET (Entrance Exam)</h3>
+                    <ul>
+                        <li>Scored 93.4 Percentile</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="edu-timeline-item">
+                <div class="edu-timeline-circle"><i class="fas fa-graduation-cap"></i></div>
+                <div class="edu-timeline-year">2023-Present</div>
+                <div class="edu-timeline-card glass-card">
+                    <h3>Vidyavardhini's College of Engineering and Technology, Vasai</h3>
+                    <ul>
+                        <li>B.E. in Computer Science</li>
+                        <li>Pursuing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="edu-timeline-track"></div>
+    </div>
+</section>
 
     <!-- Contact Section -->
 <section id="contact">
@@ -137,6 +279,8 @@
         </div>
     </div>
 </footer>
+
+<div class="nav-backdrop" id="nav-backdrop"></div>
 
 </body>
 </html>
