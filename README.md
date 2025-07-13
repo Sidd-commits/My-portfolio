@@ -63,9 +63,7 @@ The contact form is currently set up for demonstration. To make it functional, y
 - [LinkedIn](https://www.linkedin.com/in/siddhant-sawant8222)
 - [GitHub](https://github.com/Sidd-commits)
 
-## 📄 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## 🙏 Acknowledgments
 
