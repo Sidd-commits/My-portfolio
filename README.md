@@ -2,6 +2,10 @@
 
 A modern, responsive portfolio website showcasing my projects, skills, and experience. Built with pure HTML, CSS, and JavaScript.
 
+
+<img width="1919" height="912" alt="image" src="https://github.com/user-attachments/assets/d37d0192-4b60-4185-861e-1ea68bc08dae" />
+
+
 ## 🚀 Features
 
 - **Responsive Design**: Fully responsive layout that works on all devices
@@ -51,12 +55,8 @@ portfolio-web/
 - Colors and fonts can be easily modified in the CSS file
 - Responsive breakpoints can be adjusted as needed
 
-## 📝 Contact Form
 
-The contact form is currently set up for demonstration. To make it functional, you'll need to:
-1. Set up a backend service to handle form submissions
-2. Update the form action in `index.html`
-3. Add form validation and submission handling in `script.js`
+
 
 ## 🔗 Links
 
@@ -69,7 +69,7 @@ The contact form is currently set up for demonstration. To make it functional, y
 
 - Font Awesome for the icons
 - Unsplash for stock images
-- All contributors and supporters
+
 
 
 
