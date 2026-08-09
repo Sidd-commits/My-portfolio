@@ -209,17 +209,40 @@ nav {
     max-width: 50%;
 }
 
-/* Hero image on the right */
-.hero img {
-    width: 350px;
-    animation: float 3s infinite ease-in-out;
+/* Hero summary blurb - lighter weight than the tagline above it */
+.hero-summary {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.75);
+    margin: 18px 0 24px;
+    max-width: 90%;
 }
 
-/* Move Hero Image Slightly to the Left */
-.hero img {
-    width: 400px; /* Keeps the same size */
+/* Hero image on the right */
+.hero-photo-wrap {
+    position: relative;
+    width: 400px;
     animation: float 3s infinite ease-in-out;
-    transform: translateX(-30px); /* Moves it 30px left */
+    transform: translateX(-30px);
+}
+
+.hero-photo-wrap::before {
+    content: "";
+    position: absolute;
+    inset: -10%;
+    background: radial-gradient(circle, rgba(255, 140, 0, 0.15) 0%, rgba(88, 166, 255, 0.08) 45%, transparent 70%);
+    z-index: 0;
+    border-radius: 50%;
+}
+
+.hero-photo-wrap img {
+    position: relative;
+    width: 100%;
+    display: block;
+    z-index: 1;
+    -webkit-mask-image: radial-gradient(ellipse 65% 80% at center, black 55%, transparent 92%);
+    mask-image: radial-gradient(ellipse 65% 80% at center, black 55%, transparent 92%);
 }
 
 @keyframes float {
@@ -327,11 +350,65 @@ nav {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.4s ease;
+    transition: transform 0.4s ease, filter 0.4s ease;
+    filter: brightness(0.72) saturate(1.15);
 }
 
 .project-card:hover .project-image img {
     transform: scale(1.1);
+    filter: brightness(0.85) saturate(1.15);
+}
+
+/* 🔹 Themed Project Thumbnails (gradient + icon, used until real screenshots are added) */
+.project-thumb {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-thumb::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,0.08) 0%, transparent 40%),
+        radial-gradient(circle at 80% 80%, rgba(0,0,0,0.15) 0%, transparent 45%);
+}
+
+.project-thumb i {
+    font-size: 64px;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.project-card:hover .project-thumb {
+    transform: scale(1.1);
+}
+
+.thumb-krishi {
+    background: linear-gradient(135deg, #2E7D32 0%, #66BB6A 100%);
+}
+
+.thumb-brain {
+    background: linear-gradient(135deg, #4527A0 0%, #7E57C2 100%);
+}
+
+.thumb-cyber {
+    background: linear-gradient(135deg, #0D2818 0%, #1B5E20 45%, #263238 100%);
+}
+
+.thumb-vote {
+    background: linear-gradient(135deg, #1565C0 0%, #5E35B1 100%);
+}
+
+.thumb-library {
+    background: linear-gradient(135deg, #6D4C28 0%, #A1662F 100%);
 }
 
 /* 🔹 Project Overlay */
@@ -507,6 +584,114 @@ nav {
     font-size: 18px;
     color: #A9A9A9;
     margin-bottom: 40px;
+}
+
+/* 🔹 Work Experience Section */
+#work-experience {
+    padding: 100px 10%;
+    text-align: center;
+    background: #0D1117;
+}
+
+.work-exp-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    justify-content: center;
+    align-items: stretch;
+    margin-top: 40px;
+    text-align: left;
+}
+
+.work-exp-card {
+    background: rgba(22, 27, 34, 0.85);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    border: 1px solid rgba(255, 140, 0, 0.15);
+    padding: 30px 28px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.work-exp-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 40px rgba(255, 140, 0, 0.18);
+    border-color: #FFA500;
+}
+
+.work-exp-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 14px;
+}
+
+.work-exp-header i {
+    font-size: 28px;
+    color: #FFA500;
+    background: rgba(255, 140, 0, 0.08);
+    border-radius: 50%;
+    padding: 14px;
+    flex-shrink: 0;
+}
+
+.work-exp-header h3 {
+    font-size: 20px;
+    color: #58A6FF;
+    font-weight: 700;
+    margin: 0 0 4px 0;
+}
+
+.work-exp-company {
+    font-size: 14px;
+    color: #A9A9A9;
+    font-weight: 500;
+}
+
+.work-exp-date {
+    display: inline-block;
+    background: linear-gradient(45deg, #FF8C00, #58A6FF);
+    color: #fff;
+    padding: 4px 14px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.3px;
+    margin-bottom: 16px;
+}
+
+.work-exp-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.work-exp-card li {
+    font-size: 15px;
+    color: #A9A9A9;
+    line-height: 1.6;
+    margin-bottom: 8px;
+    padding-left: 18px;
+    position: relative;
+}
+
+.work-exp-card li::before {
+    content: "▹";
+    color: #FFA500;
+    position: absolute;
+    left: 0;
+}
+
+@media (max-width: 900px) {
+    .work-exp-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 🔹 Certifications Section */
+#certifications {
+    padding: 100px 10%;
+    text-align: center;
+    background: #161B22;
 }
 
 
