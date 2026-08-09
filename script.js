@@ -1,5 +1,5 @@
 // Typing Effect
-const words = ["Web Developer", "UI/UX Designer", "Coder"];
+const words = ["Full-Stack Developer", "ML/AI Enthusiast", "Problem Solver"];
 let i = 0;
 let textPosition = 0;
 let currentWord = "";
