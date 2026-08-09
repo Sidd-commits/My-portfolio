@@ -3,7 +3,8 @@
 A modern, responsive portfolio website showcasing my projects, skills, and experience. Built with pure HTML, CSS, and JavaScript.
 
 
-<img width="1919" height="912" alt="image" src="https://github.com/user-attachments/assets/d37d0192-4b60-4185-861e-1ea68bc08dae" />
+<img width="1901" height="912" alt="image" src="https://github.com/user-attachments/assets/2ec8cd5e-c371-44a3-b3fc-6918ff506ea7" />
+
 
 
 ## 🚀 Features
