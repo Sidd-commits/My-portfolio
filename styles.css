@@ -772,6 +772,25 @@ nav {
     background: #FF8C00;
 }
 
+.contact-form button:disabled {
+    background: #6b6b6b;
+    cursor: not-allowed;
+}
+
+.form-status {
+    font-size: 14px;
+    margin: 0;
+    min-height: 20px;
+}
+
+.form-status.success {
+    color: #4CAF50;
+}
+
+.form-status.error {
+    color: #FF6B6B;
+}
+
 
 /* 🔹 Footer Section */
 footer {
