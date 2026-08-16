@@ -58,7 +58,6 @@ portfolio-web/
 
 
 
-
 ## 🔗 Links
 
 - [LinkedIn](https://www.linkedin.com/in/siddhant-sawant8222)
@@ -70,8 +69,6 @@ portfolio-web/
 
 - Font Awesome for the icons
 - Unsplash for stock images
-
-
 
 
 Made with ❤️ by Siddhant 
