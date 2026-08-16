@@ -1,6 +1,5 @@
 # Siddhant's Portfolio Website
 
-🔗 **Live: [sidd-commits.github.io/My-portfolio](https://sidd-commits.github.io/My-portfolio/)**
 
 A modern, responsive portfolio website showcasing my projects, skills, and experience. Built with pure HTML, CSS, and JavaScript.
 
