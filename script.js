@@ -201,3 +201,48 @@ function skillsTagCloudFilter() {
 }
 
 document.addEventListener('DOMContentLoaded', skillsTagCloudFilter);
+
+// === Contact Form Submission (Formspree) ===
+function contactFormHandler() {
+    const form = document.getElementById('contactForm');
+    if (!form) return;
+    const status = document.getElementById('formStatus');
+    const submitBtn = form.querySelector('button[type="submit"]');
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const originalBtnText = submitBtn.textContent;
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+        status.textContent = '';
+        status.className = 'form-status';
+
+        try {
+            const response = await fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
+            });
+
+            if (response.ok) {
+                status.textContent = "Message sent! I'll get back to you soon.";
+                status.className = 'form-status success';
+                form.reset();
+            } else {
+                const data = await response.json().catch(() => null);
+                status.textContent = (data && data.errors)
+                    ? data.errors.map(err => err.message).join(', ')
+                    : 'Something went wrong. Please email me directly instead.';
+                status.className = 'form-status error';
+            }
+        } catch (err) {
+            status.textContent = 'Network error. Please email me directly instead.';
+            status.className = 'form-status error';
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalBtnText;
+        }
+    });
+}
+
+document.addEventListener('DOMContentLoaded', contactFormHandler);
