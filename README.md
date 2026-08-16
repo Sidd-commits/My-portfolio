@@ -23,16 +23,8 @@ A modern, responsive portfolio website showcasing my projects, skills, and exper
 - JavaScript
 - Font Awesome Icons
 
-## 📁 Project Structure
 
-```
-portfolio-web/
-├── index.html          # Main HTML file
-├── styles.css          # CSS styles
-├── script.js           # JavaScript functionality
-├── page3.png           # Hero section image
-└── page6.jpg           # Project images
-```
+
 
 ## 🚀 Getting Started
 
