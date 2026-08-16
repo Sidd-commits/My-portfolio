@@ -37,7 +37,9 @@
             <p class="hero-summary">Final-year Computer Engineering student with hands-on experience across 5+ academic and hackathon projects spanning web development, databases, and machine learning.</p>
             <a href="#projects" class="btn">View My Work</a>
         </div>
-        <img src="page3.png" alt="Developer Image">
+        <div class="hero-photo-wrap">
+            <img src="page3.png" alt="Siddhant Sawant">
+        </div>
     </section>
     <hr>
     <!-- Projects Section -->
@@ -48,7 +50,7 @@
     <div class="project-container">
         <div class="project-card">
             <div class="project-image">
-                <img src="page6.jpg" alt="KrishiSahayata">
+                <img src="images/krishisahayata.jpg" alt="KrishiSahayata - agri-tech platform" onerror="this.onerror=null;this.src='images/fallback-krishi.svg';">
                 <div class="project-overlay">
                     <div class="project-links">
                         <a href="https://github.com/Sidd-commits/KrishiSahayata" class="project-link" title="GitHub" target="_blank" rel="noopener">
@@ -70,7 +72,7 @@
 
         <div class="project-card">
             <div class="project-image">
-                <img src="page6.jpg" alt="Brain Tumor Detection System">
+                <img src="images/braintumor.jpg" alt="Brain Tumor Detection System - MRI scans" onerror="this.onerror=null;this.src='images/fallback-brain.svg';">
                 <div class="project-overlay">
                     <div class="project-links">
                         <a href="https://github.com/Sidd-commits/Brain-Tumor-Detection" class="project-link" title="GitHub" target="_blank" rel="noopener">
@@ -92,7 +94,7 @@
 
         <div class="project-card">
             <div class="project-image">
-                <img src="page6.jpg" alt="CyberSentinel Suite">
+                <img src="images/cybersentinel.jpg" alt="CyberSentinel Suite - cybersecurity code" onerror="this.onerror=null;this.src='images/fallback-cyber.svg';">
                 <div class="project-overlay">
                     <div class="project-links">
                         <a href="https://github.com/Sidd-commits/CyberSentinel-Suite" class="project-link" title="GitHub" target="_blank" rel="noopener">
@@ -114,7 +116,7 @@
 
         <div class="project-card">
             <div class="project-image">
-                <img src="page6.jpg" alt="VoteEase">
+                <img src="images/voteease.jpg" alt="VoteEase - online voting platform" onerror="this.onerror=null;this.src='images/fallback-vote.svg';">
                 <div class="project-overlay">
                     <div class="project-links">
                         <a href="https://github.com/Sidd-commits/VoteEase" class="project-link" title="GitHub" target="_blank" rel="noopener">
@@ -136,7 +138,7 @@
 
         <div class="project-card">
             <div class="project-image">
-                <img src="page6.jpg" alt="Library Management System">
+                <img src="images/library.jpg" alt="Library Management System - bookshelf" onerror="this.onerror=null;this.src='images/fallback-library.svg';">
                 <div class="project-overlay">
                     <div class="project-links">
                         <a href="https://github.com/Sidd-commits/Library-Management-System" class="project-link" title="GitHub" target="_blank" rel="noopener">
@@ -195,32 +197,35 @@
 <section id="work-experience">
     <h2 class="section-title">Work Experience</h2>
     <p class="section-description">Internships that shaped my full-stack fundamentals.</p>
-    <div class="edu-timeline">
-        <div class="edu-timeline-list">
-            <div class="edu-timeline-item">
-                <div class="edu-timeline-circle"><i class="fas fa-briefcase"></i></div>
-                <div class="edu-timeline-year">Dec 2024 - Jan 2025</div>
-                <div class="edu-timeline-card glass-card">
-                    <h3>Web Development Intern - Octanet Services Pvt Ltd</h3>
-                    <ul>
-                        <li>Built responsive web pages using HTML, CSS, and JavaScript based on client specifications</li>
-                        <li>Delivered 5+ client-ready pages within a 4-week timeline while ensuring cross-browser compatibility</li>
-                    </ul>
+    <div class="work-exp-container">
+        <div class="work-exp-card">
+            <div class="work-exp-header">
+                <i class="fas fa-briefcase"></i>
+                <div>
+                    <h3>Web Development Intern</h3>
+                    <span class="work-exp-company">Octanet Services Pvt Ltd</span>
                 </div>
             </div>
-            <div class="edu-timeline-item">
-                <div class="edu-timeline-circle"><i class="fas fa-briefcase"></i></div>
-                <div class="edu-timeline-year">Jul 2025 - Aug 2025</div>
-                <div class="edu-timeline-card glass-card">
-                    <h3>Intern (Frontend & Backend) - CodeAlpha</h3>
-                    <ul>
-                        <li>Completed a 1-month dual-track virtual internship covering frontend and backend fundamentals</li>
-                        <li>Gained practical exposure to full-stack workflows through assigned tasks across both tracks</li>
-                    </ul>
-                </div>
-            </div>
+            <span class="work-exp-date">Dec 2024 - Jan 2025</span>
+            <ul>
+                <li>Built responsive web pages using HTML, CSS, and JavaScript based on client specifications</li>
+                <li>Delivered 5+ client-ready pages within a 4-week timeline while ensuring cross-browser compatibility</li>
+            </ul>
         </div>
-        <div class="edu-timeline-track"></div>
+        <div class="work-exp-card">
+            <div class="work-exp-header">
+                <i class="fas fa-briefcase"></i>
+                <div>
+                    <h3>Intern - Frontend & Backend</h3>
+                    <span class="work-exp-company">CodeAlpha</span>
+                </div>
+            </div>
+            <span class="work-exp-date">Jul 2025 - Aug 2025</span>
+            <ul>
+                <li>Completed a 1-month dual-track virtual internship covering frontend and backend fundamentals</li>
+                <li>Gained practical exposure to full-stack workflows through assigned tasks across both tracks</li>
+            </ul>
+        </div>
     </div>
 </section>
 
@@ -311,11 +316,12 @@
         </div>
 
         <!-- Contact Form -->
-        <form class="contact-form">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/xbgrazlg" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
             <button type="submit" class="btn">Send Message</button>
+            <p id="formStatus" class="form-status"></p>
         </form>
     </div>
 </section>
