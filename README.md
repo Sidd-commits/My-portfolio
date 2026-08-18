@@ -17,7 +17,7 @@ Designed with a sleek dark-mode glassmorphic aesthetic to present:
 - **Technical Skills**: Core competencies across Java, Python, C++, JavaScript, Spring Boot, Flask, and databases.
 - **Experience & Education**: Academic background at Mumbai University (VCET) and verified certifications.
 
---
+----
 
 
 
